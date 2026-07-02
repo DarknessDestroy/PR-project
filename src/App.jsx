@@ -1,9 +1,9 @@
 import { useRef, useState } from 'react'
 import Hero_Section from './components/Information.jsx'
 import Header from './components/Header'
-import Toast from './components/Toast'
+import Toast from './components/Copy_Message.jsx'
 import ExamplesSection from './components/ExamplesSection'
-import ContactsSection from './components/ContactsSection'
+import ContactsSection from './components/Contacts.jsx'
 
 const App = () => {
   const [toastMessage, setToastMessage] = useState('')

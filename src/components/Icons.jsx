@@ -6,7 +6,7 @@ export const TelegramIcon = () => (
 
 export const MaxIcon = () => (
   <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-current text-xs font-bold">
-    ✓
+    M
   </span>
 )
 

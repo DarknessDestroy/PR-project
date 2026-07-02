@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 const Header = ({ scrollToSection, homeRef, examplesRef, contactsRef }) => {
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true)
+  const [isHeaderVisible, setIsHeaderVisible] = useState(false)
   const lastScrollY = useRef(0)
 
   useEffect(() => {

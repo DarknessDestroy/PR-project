@@ -1,6 +1,6 @@
 import { TelegramIcon, CopyIcon, MaxIcon } from './Icons'
 
-const ContactsSection = ({ ref, copyToClipboard }) => {
+const Contacts= ({ ref, copyToClipboard }) => {
   return (
     <section ref={ref} id="contacts" className="min-h-screen bg-marble-100 px-4 py-16 sm:px-6">
       <div className="mx-auto max-w-4xl text-center">
@@ -12,6 +12,7 @@ const ContactsSection = ({ ref, copyToClipboard }) => {
         </p>
         <div className="mt-8 flex w-full max-w-sm flex-col gap-3 mx-auto">
           <button
+          title="Скопировать номер в буфер обмена"
             onClick={() => copyToClipboard('+7 978 959 83 25')}
             className="marble-btn-primary flex items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-sm font-medium sm:text-base"
           >
@@ -19,6 +20,7 @@ const ContactsSection = ({ ref, copyToClipboard }) => {
             +7 (978) 959-83-25 (Иван)
           </button>
           <a
+          title="Написать в Telegram"
             href="https://t.me/DesrtroyDark"
             target="_blank"
             rel="noopener noreferrer"
@@ -28,21 +30,20 @@ const ContactsSection = ({ ref, copyToClipboard }) => {
             Написать в Telegram
           </a>
 
-          <button
-            type="button"
-            disabled
-            title="Скоро будет доступно"
-            aria-disabled="true"
-            className="marble-btn-ghost flex cursor-not-allowed items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-sm font-medium sm:text-base"
+          <a
+          title="Написать в MAX"
+            href="https://web.max.ru/138756035"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="marble-btn-primary flex items-center justify-center gap-2 rounded-xl px-5 py-3.5 text-sm font-medium sm:text-base"
           >
             <MaxIcon />
             Написать в MAX
-            <span className="text-xs font-normal">(скоро)</span>
-          </button>
+          </a>
         </div>
       </div>
     </section>
   )
 }
 
-export default ContactsSection
+export default Contacts
