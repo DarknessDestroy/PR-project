@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", "Times New Roman", serif;
+  --color-marble-50: #fafafa;
+  --color-marble-100: #f0f0f0;
+  --color-marble-200: #e6e6e6;
+  --color-marble-300: #d4d4d4;
+  --color-marble-400: #a3a3a3;
+  --color-marble-500: #737373;
+  --color-marble-800: #262626;
+  --color-marble-900: #171717;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(165deg, #ececec 0%, #f8f8f8 38%, #e3e3e3 100%);
+  color: var(--color-marble-900);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-display {
+  font-family: var(--font-serif);
+}
+
+.marble-surface {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 12px 40px rgba(0, 0, 0, 0.06),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.marble-surface-solid {
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.marble-hero-glow {
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.14))
+    drop-shadow(0 8px 16px rgba(0, 0, 0, 0.06));
+}
+
+.marble-btn-primary {
+  background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+  color: #fafafa;
+  border: 1px solid #404040;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.marble-btn-primary:hover:not(:disabled) {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
+}
+
+.marble-btn-secondary {
+  background: rgba(255, 255, 255, 0.85);
+  color: #262626;
+  border: 1px solid #c8c8c8;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.marble-btn-secondary:hover:not(:disabled) {
+  background: #ffffff;
+  border-color: #a8a8a8;
+  transform: translateY(-1px);
+}
+
+.marble-btn-ghost {
+  background: rgba(255, 255, 255, 0.4);
+  color: #737373;
+  border: 1px solid #d4d4d4;
+}
+
+.marble-input {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d4d4d4;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.marble-input:focus {
+  outline: none;
+  border-color: #a3a3a3;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.06);
+}
+
+@keyframes auth-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes auth-backdrop-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes auth-modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes auth-modal-out {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.96) translateY(0.5rem);
+  }
+}
+
+@keyframes auth-content-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.35rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-auth-backdrop-in {
+  animation: auth-backdrop-in 0.25s ease-out forwards;
+}
+
+@utility animate-auth-backdrop-out {
+  animation: auth-backdrop-out 0.2s ease-in forwards;
+}
+
+@utility animate-auth-modal-in {
+  animation: auth-modal-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@utility animate-auth-modal-out {
+  animation: auth-modal-out 0.25s ease-in forwards;
+}
+
+@utility animate-auth-content-in {
+  animation: auth-content-in 0.3s ease-out forwards;
+}
