@@ -1,5 +1,3 @@
-export const SLOGAN = 'Ваш сайт — на первой строке интернета'
-
 const main = () => {
   return (
     <section className="relative flex flex-1 flex-col items-center px-4 py-10 text-center sm:px-6 sm:py-14 lg:py-16">
@@ -12,16 +10,12 @@ const main = () => {
           />
         </div>
 
-        <div>
-          
-        </div>
-
         <p className="text-xs font-medium tracking-[0.2em] text-marble-500 uppercase sm:text-sm">
           Создание сайтов
         </p>
 
         <p className="marble-surface mt-4 rounded-full px-5 py-2 font-display text-base font-semibold tracking-wide text-marble-800 sm:text-lg">
-          {SLOGAN}
+          Ваш сайт — на первой строке интернета
         </p>
 
 
